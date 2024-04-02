@@ -8,17 +8,73 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var averageLightSleepDuration: TimeInterval = 0
+    @State private var showingAlert = false
+    @State private var alertMessage = ""
+
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        VStack(spacing: 20) {
+            Text("Sleep Data")
+                .font(.headline)
+            
+            Text("Average Light Sleep Duration:")
+            Text("\(formatDuration(averageLightSleepDuration))")
+                .font(.title)
+                .padding()
+            
+            Button("Fetch Sleep Data") {
+                fetchSleepData()
+            }
+            .padding()
+            .background(Color.blue)
+            .foregroundColor(.white)
+            .cornerRadius(8)
         }
         .padding()
+        .alert(isPresented: $showingAlert) {
+            Alert(title: Text("Info"), message: Text(alertMessage), dismissButton: .default(Text("OK")))
+        }
+    }
+
+    private func fetchSleepData() {
+        HealthKitManager.shared.requestSleepAuthorization { authorized in
+            guard authorized else {
+                self.alertMessage = "HealthKit authorization was denied."
+                self.showingAlert = true
+                return
+            }
+
+            HealthKitManager.shared.fetchSleepData { sleepData in
+                if let sleepData = sleepData {
+                    if let firstPhaseDuration = HealthKitManager.shared.calculateFirstPhaseLightSleepDuration(from: sleepData) {
+                        self.averageLightSleepDuration = firstPhaseDuration
+                    } else {
+                        self.alertMessage = "No Light Sleep data found for the first phase."
+                        self.showingAlert = true
+                    }
+                } else {
+                    self.alertMessage = "Failed to fetch sleep data."
+                    self.showingAlert = true
+                }
+            }
+        }
+    }
+
+
+    private func formatDuration(_ duration: TimeInterval) -> String {
+        let formatter = DateComponentsFormatter()
+        formatter.allowedUnits = [.hour, .minute]
+        formatter.unitsStyle = .short
+        return formatter.string(from: duration) ?? "N/A"
     }
 }
 
-#Preview {
-    ContentView()
+
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
 }
+
+

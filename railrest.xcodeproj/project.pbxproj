@@ -11,7 +11,24 @@
 		448EB4F52BBA8DE6002B5D63 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448EB4F42BBA8DE6002B5D63 /* ContentView.swift */; };
 		448EB4F72BBA8DE7002B5D63 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 448EB4F62BBA8DE7002B5D63 /* Assets.xcassets */; };
 		448EB4FA2BBA8DE7002B5D63 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 448EB4F92BBA8DE7002B5D63 /* Preview Assets.xcassets */; };
+		448EB5022BBA8EA6002B5D63 /* HealthStoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448EB5012BBA8EA6002B5D63 /* HealthStoreManager.swift */; };
+		448EB5042BBA8ECC002B5D63 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448EB5032BBA8ECC002B5D63 /* SceneDelegate.swift */; };
+		448EB5212BBAA495002B5D63 /* HealthKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448EB5202BBAA495002B5D63 /* HealthKitManager.swift */; };
+		448EB5232BBAAFD6002B5D63 /* ObservableObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448EB5222BBAAFD6002B5D63 /* ObservableObject.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		448EB51B2BBA95F9002B5D63 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		448EB4EF2BBA8DE6002B5D63 /* railrest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = railrest.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -19,6 +36,12 @@
 		448EB4F42BBA8DE6002B5D63 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		448EB4F62BBA8DE7002B5D63 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		448EB4F92BBA8DE7002B5D63 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		448EB5002BBA8E1E002B5D63 /* railrest.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = railrest.entitlements; sourceTree = "<group>"; };
+		448EB5012BBA8EA6002B5D63 /* HealthStoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthStoreManager.swift; sourceTree = "<group>"; };
+		448EB5032BBA8ECC002B5D63 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		448EB5052BBA8F0B002B5D63 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		448EB5202BBAA495002B5D63 /* HealthKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitManager.swift; sourceTree = "<group>"; };
+		448EB5222BBAAFD6002B5D63 /* ObservableObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableObject.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,10 +74,16 @@
 		448EB4F12BBA8DE6002B5D63 /* railrest */ = {
 			isa = PBXGroup;
 			children = (
+				448EB5052BBA8F0B002B5D63 /* Info.plist */,
+				448EB5002BBA8E1E002B5D63 /* railrest.entitlements */,
 				448EB4F22BBA8DE6002B5D63 /* railrestApp.swift */,
 				448EB4F42BBA8DE6002B5D63 /* ContentView.swift */,
 				448EB4F62BBA8DE7002B5D63 /* Assets.xcassets */,
 				448EB4F82BBA8DE7002B5D63 /* Preview Content */,
+				448EB5012BBA8EA6002B5D63 /* HealthStoreManager.swift */,
+				448EB5032BBA8ECC002B5D63 /* SceneDelegate.swift */,
+				448EB5202BBAA495002B5D63 /* HealthKitManager.swift */,
+				448EB5222BBAAFD6002B5D63 /* ObservableObject.swift */,
 			);
 			path = railrest;
 			sourceTree = "<group>";
@@ -77,6 +106,7 @@
 				448EB4EB2BBA8DE6002B5D63 /* Sources */,
 				448EB4EC2BBA8DE6002B5D63 /* Frameworks */,
 				448EB4ED2BBA8DE6002B5D63 /* Resources */,
+				448EB51B2BBA95F9002B5D63 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
@@ -138,7 +168,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				448EB4F52BBA8DE6002B5D63 /* ContentView.swift in Sources */,
+				448EB5022BBA8EA6002B5D63 /* HealthStoreManager.swift in Sources */,
 				448EB4F32BBA8DE6002B5D63 /* railrestApp.swift in Sources */,
+				448EB5212BBAA495002B5D63 /* HealthKitManager.swift in Sources */,
+				448EB5042BBA8ECC002B5D63 /* SceneDelegate.swift in Sources */,
+				448EB5232BBAAFD6002B5D63 /* ObservableObject.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,12 +303,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = railrest/railrest.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"railrest/Preview Content\"";
-				DEVELOPMENT_TEAM = 87N548UZ24;
+				DEVELOPMENT_TEAM = C89FEC543S;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = railrest/Info.plist;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "App ini membutuhkan akses ke data heart rate Anda untuk memantau fase tidur.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "App ini membutuhkan akses untuk menulis data kesehatan.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -298,12 +336,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = railrest/railrest.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"railrest/Preview Content\"";
-				DEVELOPMENT_TEAM = 87N548UZ24;
+				DEVELOPMENT_TEAM = C89FEC543S;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = railrest/Info.plist;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "App ini membutuhkan akses ke data heart rate Anda untuk memantau fase tidur.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "App ini membutuhkan akses untuk menulis data kesehatan.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
