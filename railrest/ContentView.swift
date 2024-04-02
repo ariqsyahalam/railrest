@@ -16,19 +16,15 @@ struct ContentView: View {
         VStack(spacing: 20) {
             Text("Sleep Data")
                 .font(.headline)
-            
             Text("Average Light Sleep Duration:")
             Text("\(formatDuration(averageLightSleepDuration))")
                 .font(.title)
                 .padding()
-            
-            Button("Fetch Sleep Data") {
-                fetchSleepData()
-            }
-            .padding()
-            .background(Color.blue)
-            .foregroundColor(.white)
-            .cornerRadius(8)
+            Button(/*@START_MENU_TOKEN@*/"Button"/*@END_MENU_TOKEN@*/) {
+                    print(averageLightSleepDuration)
+                }
+        }.onAppear {
+            fetchSleepData()
         }
         .padding()
         .alert(isPresented: $showingAlert) {

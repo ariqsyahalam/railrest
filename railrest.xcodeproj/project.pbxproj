@@ -11,10 +11,7 @@
 		448EB4F52BBA8DE6002B5D63 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448EB4F42BBA8DE6002B5D63 /* ContentView.swift */; };
 		448EB4F72BBA8DE7002B5D63 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 448EB4F62BBA8DE7002B5D63 /* Assets.xcassets */; };
 		448EB4FA2BBA8DE7002B5D63 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 448EB4F92BBA8DE7002B5D63 /* Preview Assets.xcassets */; };
-		448EB5022BBA8EA6002B5D63 /* HealthStoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448EB5012BBA8EA6002B5D63 /* HealthStoreManager.swift */; };
-		448EB5042BBA8ECC002B5D63 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448EB5032BBA8ECC002B5D63 /* SceneDelegate.swift */; };
 		448EB5212BBAA495002B5D63 /* HealthKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448EB5202BBAA495002B5D63 /* HealthKitManager.swift */; };
-		448EB5232BBAAFD6002B5D63 /* ObservableObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448EB5222BBAAFD6002B5D63 /* ObservableObject.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -37,11 +34,8 @@
 		448EB4F62BBA8DE7002B5D63 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		448EB4F92BBA8DE7002B5D63 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		448EB5002BBA8E1E002B5D63 /* railrest.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = railrest.entitlements; sourceTree = "<group>"; };
-		448EB5012BBA8EA6002B5D63 /* HealthStoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthStoreManager.swift; sourceTree = "<group>"; };
-		448EB5032BBA8ECC002B5D63 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		448EB5052BBA8F0B002B5D63 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		448EB5202BBAA495002B5D63 /* HealthKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitManager.swift; sourceTree = "<group>"; };
-		448EB5222BBAAFD6002B5D63 /* ObservableObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableObject.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,10 +74,7 @@
 				448EB4F42BBA8DE6002B5D63 /* ContentView.swift */,
 				448EB4F62BBA8DE7002B5D63 /* Assets.xcassets */,
 				448EB4F82BBA8DE7002B5D63 /* Preview Content */,
-				448EB5012BBA8EA6002B5D63 /* HealthStoreManager.swift */,
-				448EB5032BBA8ECC002B5D63 /* SceneDelegate.swift */,
 				448EB5202BBAA495002B5D63 /* HealthKitManager.swift */,
-				448EB5222BBAAFD6002B5D63 /* ObservableObject.swift */,
 			);
 			path = railrest;
 			sourceTree = "<group>";
@@ -168,11 +159,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				448EB4F52BBA8DE6002B5D63 /* ContentView.swift in Sources */,
-				448EB5022BBA8EA6002B5D63 /* HealthStoreManager.swift in Sources */,
 				448EB4F32BBA8DE6002B5D63 /* railrestApp.swift in Sources */,
 				448EB5212BBAA495002B5D63 /* HealthKitManager.swift in Sources */,
-				448EB5042BBA8ECC002B5D63 /* SceneDelegate.swift in Sources */,
-				448EB5232BBAAFD6002B5D63 /* ObservableObject.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
