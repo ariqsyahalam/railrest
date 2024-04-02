@@ -60,14 +60,14 @@ struct InitialView: View {
         
     }
     
-    private func fetchSleepData() {
+    func fetchSleepData() {
         HealthKitManager.shared.requestSleepAuthorization { authorized in
             guard authorized else {
                 self.alertMessage = "HealthKit authorization was denied."
                 self.showingAlert = true
                 return
             }
-
+            
             HealthKitManager.shared.fetchSleepData { sleepData in
                 if let sleepData = sleepData {
                     if let firstPhaseDuration = HealthKitManager.shared.calculateFirstPhaseLightSleepDuration(from: sleepData) {
@@ -83,9 +83,9 @@ struct InitialView: View {
             }
         }
     }
-
-
-    private func formatDuration(_ duration: TimeInterval) -> String {
+    
+    
+    func formatDuration(_ duration: TimeInterval) -> String {
         let formatter = DateComponentsFormatter()
         formatter.allowedUnits = [.hour, .minute]
         formatter.unitsStyle = .short
