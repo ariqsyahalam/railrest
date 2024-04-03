@@ -30,7 +30,6 @@ struct InitialView: View {
                     }.padding(0)
                     Spacer()
                     NavigationLink(destination: OngoingView()) {
-                        
                         Text("Start Power Nap")
                             .font(Font.custom("SF Pro", size: 17))
                             .foregroundColor(Color(red: 0.12, green: 0.14, blue: 0.39))
@@ -53,43 +52,9 @@ struct InitialView: View {
         }
         .navigationBarBackButtonHidden(true)
         .environmentObject(alarmManager)
-        .onAppear{
-            fetchSleepData()
-        }
     }
 
-    func fetchSleepData() {
-        HealthKitManager.shared.requestSleepAuthorization { authorized in
-            guard authorized else {
-                self.alertMessage = "HealthKit authorization was denied."
-                self.showingAlert = true
-                return
-            }
-            
-            HealthKitManager.shared.fetchSleepData { sleepData in
-                if let sleepData = sleepData {
-                    if let firstPhaseDuration = HealthKitManager.shared.calculateFirstPhaseLightSleepDuration(from: sleepData) {
-                        self.averageLightSleepDuration = firstPhaseDuration
-                    } else {
-                        self.alertMessage = "No Light Sleep data found for the first phase."
-                        self.showingAlert = true
-                    }
-                } else {
-                    self.alertMessage = "Failed to fetch sleep data."
-                    self.showingAlert = true
-                }
-            }
-        }
-    }
-    
-    
-    func formatDuration(_ duration: TimeInterval) -> String {
-        let formatter = DateComponentsFormatter()
-        formatter.allowedUnits = [.hour, .minute]
-        formatter.unitsStyle = .short
-        return formatter.string(from: duration) ?? "N/A"
-    }
-    
+   
 }
 
 

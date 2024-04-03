@@ -24,6 +24,7 @@
 		448EB4F72BBA8DE7002B5D63 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 448EB4F62BBA8DE7002B5D63 /* Assets.xcassets */; };
 		448EB4FA2BBA8DE7002B5D63 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 448EB4F92BBA8DE7002B5D63 /* Preview Assets.xcassets */; };
 		448EB5212BBAA495002B5D63 /* HealthKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448EB5202BBAA495002B5D63 /* HealthKitManager.swift */; };
+		92FBFA4D2BBD399500F5E545 /* SummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FBFA4C2BBD399500F5E545 /* SummaryView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -60,6 +61,7 @@
 		448EB5002BBA8E1E002B5D63 /* railrest.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = railrest.entitlements; sourceTree = "<group>"; };
 		448EB5052BBA8F0B002B5D63 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		448EB5202BBAA495002B5D63 /* HealthKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitManager.swift; sourceTree = "<group>"; };
+		92FBFA4C2BBD399500F5E545 /* SummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				4488D86B2BBBCE3400C4E55C /* ContentView.swift */,
 				4488D8682BBBCE3400C4E55C /* InitialView.swift */,
 				4488D86A2BBBCE3400C4E55C /* OngoingView.swift */,
+				92FBFA4C2BBD399500F5E545 /* SummaryView.swift */,
 				4488D8692BBBCE3400C4E55C /* TimerView.swift */,
 			);
 			path = Views;
