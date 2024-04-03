@@ -10,28 +10,62 @@ import SwiftUI
 struct OptionButton: View {
     let imageName: String
     let label: String
-    let color: Color
-    let foreColor: Color
-    let labelColor: Color
+    let soundType: String
+    
+    private let noiseManager = NoiseManager()
+    @Binding var activeSoundType: String?
+    @Binding var currentPlayingSound: String?
     
     var body: some View {
         VStack {
             Circle()
-                .fill(color)
+                .fill(.quaternary)
+                .overlay(
+                    Circle()
+                        .stroke(activeSoundType == soundType ? .white : .clear, lineWidth: 4)
+                        .frame(width: 60, height: 60)
+                )
                 .padding(10)
                 .overlay(
                     Image(systemName: imageName)
-                        .foregroundColor(foreColor)
+                        .foregroundColor(.white)
                         .font(.system(size: 30))
                 )
-                .frame(width: 80, height: 80)
+                .frame(width: 75, height: 75)
+                .onTapGesture {
+                    toggleSound()
+                }
             Text(label)
                 .font(.subheadline)
-                .foregroundColor(labelColor)
+                .foregroundColor(.white)
+        }
+    }
+    
+    private func toggleSound() {
+        if activeSoundType != soundType {
+            noiseManager.playNoise(soundType: soundType)
+            activeSoundType = soundType
+            
+            if let previousPlayingSound = currentPlayingSound {
+                noiseManager.stopNoise(soundType: previousPlayingSound)
+            }
+            currentPlayingSound = soundType
+        } else {
+            noiseManager.stopNoise(soundType: soundType)
+            activeSoundType = nil
+            currentPlayingSound = nil
         }
     }
 }
 
+
+
 #Preview {
-    OptionButton(imageName: "cloud.rain", label: "Rain", color: .white, foreColor: Color(hex: "3B4192"), labelColor: .white)
+    OptionButton(
+        imageName: "cloud.rain",
+        label: "Rain",
+        soundType: "rain",
+        activeSoundType: .constant(nil),
+        currentPlayingSound: .constant(nil)
+    )
 }

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		019E18F22BBD38E60086012D /* rain.wav in Resources */ = {isa = PBXBuildFile; fileRef = 019E18F12BBD38E60086012D /* rain.wav */; };
+		019E18F42BBD38F60086012D /* alarm.wav in Resources */ = {isa = PBXBuildFile; fileRef = 019E18F32BBD38F60086012D /* alarm.wav */; };
+		019E18F82BBD399C0086012D /* NoiseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019E18F72BBD399C0086012D /* NoiseManager.swift */; };
+		01D9E9CE2BBD5318003881DF /* static.wav in Resources */ = {isa = PBXBuildFile; fileRef = 01D9E9CD2BBD5318003881DF /* static.wav */; };
 		4488D86C2BBBCE3400C4E55C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4488D86B2BBBCE3400C4E55C /* ContentView.swift */; };
 		4488D86D2BBBCE3400C4E55C /* AlarmView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4488D8672BBBCE3400C4E55C /* AlarmView.swift */; };
 		4488D86E2BBBCE3400C4E55C /* InitialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4488D8682BBBCE3400C4E55C /* InitialView.swift */; };
@@ -36,6 +40,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		019E18F12BBD38E60086012D /* rain.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = rain.wav; sourceTree = "<group>"; };
+		019E18F32BBD38F60086012D /* alarm.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = alarm.wav; sourceTree = "<group>"; };
+		019E18F72BBD399C0086012D /* NoiseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoiseManager.swift; sourceTree = "<group>"; };
+		01D9E9CD2BBD5318003881DF /* static.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = static.wav; sourceTree = "<group>"; };
 		4488D8672BBBCE3400C4E55C /* AlarmView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmView.swift; sourceTree = "<group>"; };
 		4488D8682BBBCE3400C4E55C /* InitialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialView.swift; sourceTree = "<group>"; };
 		4488D8692BBBCE3400C4E55C /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
@@ -65,6 +73,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		019E18F02BBD38D10086012D /* Sound */ = {
+			isa = PBXGroup;
+			children = (
+				019E18F32BBD38F60086012D /* alarm.wav */,
+				01D9E9CD2BBD5318003881DF /* static.wav */,
+				019E18F12BBD38E60086012D /* rain.wav */,
+			);
+			path = Sound;
+			sourceTree = "<group>";
+		};
 		4488D8442BBBCCE400C4E55C /* Helper */ = {
 			isa = PBXGroup;
 			children = (
@@ -73,6 +91,7 @@
 				4488D8712BBBD02900C4E55C /* OptionButton.swift */,
 				4488D8722BBBD02900C4E55C /* TimerManager.swift */,
 				448EB5202BBAA495002B5D63 /* HealthKitManager.swift */,
+				019E18F72BBD399C0086012D /* NoiseManager.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -112,6 +131,7 @@
 				4488D8662BBBCE3400C4E55C /* Views */,
 				4488D8442BBBCCE400C4E55C /* Helper */,
 				448EB5052BBA8F0B002B5D63 /* Info.plist */,
+				019E18F02BBD38D10086012D /* Sound */,
 				448EB5002BBA8E1E002B5D63 /* railrest.entitlements */,
 				448EB4F62BBA8DE7002B5D63 /* Assets.xcassets */,
 				448EB4F82BBA8DE7002B5D63 /* Preview Content */,
@@ -186,8 +206,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				019E18F22BBD38E60086012D /* rain.wav in Resources */,
 				448EB4FA2BBA8DE7002B5D63 /* Preview Assets.xcassets in Resources */,
+				019E18F42BBD38F60086012D /* alarm.wav in Resources */,
 				448EB4F72BBA8DE7002B5D63 /* Assets.xcassets in Resources */,
+				01D9E9CE2BBD5318003881DF /* static.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,6 +226,7 @@
 				4488D8782BBBD02900C4E55C /* Color.swift in Sources */,
 				4488D8752BBBD02900C4E55C /* OptionButton.swift in Sources */,
 				4488D86C2BBBCE3400C4E55C /* ContentView.swift in Sources */,
+				019E18F82BBD399C0086012D /* NoiseManager.swift in Sources */,
 				4488D86D2BBBCE3400C4E55C /* AlarmView.swift in Sources */,
 				448EB4F32BBA8DE6002B5D63 /* railrestApp.swift in Sources */,
 				4488D8762BBBD02900C4E55C /* TimerManager.swift in Sources */,
@@ -343,7 +367,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"railrest/Preview Content\"";
-				DEVELOPMENT_TEAM = C89FEC543S;
+				DEVELOPMENT_TEAM = W64G46TNFY;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = railrest/Info.plist;
@@ -360,7 +384,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ankermania.railrest;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bungaaura.railrest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -377,7 +401,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"railrest/Preview Content\"";
-				DEVELOPMENT_TEAM = C89FEC543S;
+				DEVELOPMENT_TEAM = W64G46TNFY;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = railrest/Info.plist;
@@ -394,7 +418,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ankermania.railrest;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bungaaura.railrest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

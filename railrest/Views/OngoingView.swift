@@ -11,6 +11,8 @@ struct OngoingView: View {
     @Environment(\.presentationMode) var presentationMode
     @EnvironmentObject var alarmManager: AlarmManager
     @State private var alarmStarted = false
+    @State private var activeSoundType: String? = nil
+    @State private var currentPlayingSound: String?
     
     @StateObject var timerManager: TimerManager
     
@@ -33,8 +35,8 @@ struct OngoingView: View {
                                 .font(.title)
                                 .foregroundColor(.white)
                             
-                            TimerView(timerManager: timerManager)
-                                .foregroundColor(.white)
+                            //                            TimerView(timerManager: timerManager)
+                            //                                .foregroundColor(.white)
                             
                             Button(action: {
                                 presentationMode.wrappedValue.dismiss()
@@ -55,28 +57,26 @@ struct OngoingView: View {
                                 .shadow(radius: 25)
                         )
                         
-
-                        Text("Enjoy and relax to get a better sleep")
-                            .font(.subheadline)
-//                            .padding()
-                            .foregroundColor(Color(hex: "63FFF6"))
                         
-                        Text("Calm Rain")
-                            .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
-                            .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
-                            .foregroundColor(.white)
-//                            .padding(.top, 20)
-                        
-                        Text("is playing..")
+                        Text("Choose the ambience to help you sleep")
+                            .font(.body)
+                            .padding(16)
                             .foregroundColor(.white)
                         
-                        HStack(spacing: 5) {
-                            OptionButton(imageName: "cloud.rain", label: "Rain", color: .yellow, foreColor: Color(hex: "101A4D"), labelColor: .yellow).fontWeight(.bold)
-                            OptionButton(imageName: "water.waves", label: "Waves", color: Color(hex: "3B4192"), foreColor: .white, labelColor: .white)
-                            OptionButton(imageName: "radio", label: "Static", color: Color(hex: "3B4192"), foreColor: .white, labelColor: .white)
-                            OptionButton(imageName: "nosign", label: "None", color: Color(hex: "3B4192"), foreColor: .white, labelColor: .white)
+                        
+                        VStack {
+                            HStack {
+                                OptionButton(imageName: "cloud.rain", label: "Rain", soundType: "rain", activeSoundType: $activeSoundType, currentPlayingSound: $currentPlayingSound)
+                                OptionButton(imageName: "radio", label: "Static", soundType: "static", activeSoundType: $activeSoundType, currentPlayingSound: $currentPlayingSound)
+                                OptionButton(imageName: "nosign", label: "None", soundType: "none", activeSoundType: $activeSoundType, currentPlayingSound: $currentPlayingSound)
+                            }
                         }
-                        .padding()
+                        .onAppear {
+                            // Pastikan activeSoundType tidak nil
+                            if activeSoundType == nil {
+                                activeSoundType = "none"
+                            }
+                        }
                     }
                     .padding(15)
                     .navigationBarBackButtonHidden(true)

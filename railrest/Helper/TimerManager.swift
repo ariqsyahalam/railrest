@@ -20,7 +20,7 @@ class TimerManager: ObservableObject {
         isRunning = true
         timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { timer in
             self.elapsedTime += 1
-            if self.elapsedTime >= 300 && !self.alarmTriggered { //ubah ini karena yg jd patokan adalah heartrate <50
+            if self.elapsedTime >= 10 && !self.alarmTriggered { //ubah ini karena yg jd patokan adalah heartrate <50
                 self.alarmTriggered = true
                 self.alarmManager.playAlarmSound()
                 
