@@ -53,8 +53,11 @@ struct InitialView: View {
         }
         .navigationBarBackButtonHidden(true)
         .environmentObject(alarmManager)
+        .onAppear{
+            fetchSleepData()
+        }
     }
-    
+
     func fetchSleepData() {
         HealthKitManager.shared.requestSleepAuthorization { authorized in
             guard authorized else {
