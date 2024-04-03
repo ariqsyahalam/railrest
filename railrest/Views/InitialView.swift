@@ -18,46 +18,41 @@ struct InitialView: View {
     var body: some View {
         NavigationStack {
             ZStack {
-                LinearGradient(gradient: Gradient(colors: [Color(hex: "1E2363"), Color(hex: "3D47C9")]), startPoint: .top, endPoint: .bottom)
-                    .edgesIgnoringSafeArea(.all)
-                
-                VStack(spacing: 40) {
-                    Image("start")
-                    
-                    VStack(alignment: .leading, spacing: 10) {
-                        
-                        Text("Power Nap can energize you in a short time")
-                            .font(.title)
-                            .fontWeight(.bold)
+                VStack(alignment: .center, spacing: 13) {
+                    Spacer()
+                    Image("home_logo")
+                    VStack(alignment: .center, spacing: 13) {
+                        Text("Help you to get power nap based on your personalize sleep behavior")
+                            .font(Font.custom("SF Pro", size: 17))
+                            .multilineTextAlignment(.center)
                             .foregroundColor(.white)
-                        
-                        Text("Make sure your belongings are safe")
-                            .foregroundColor(.white)
-                    }
-                    
-                    
+                            .frame(width: 297, alignment: .top)
+                    }.padding(0)
+                    Spacer()
                     NavigationLink(destination: OngoingView()) {
+                        
                         Text("Start Power Nap")
-                            .font(.title2)
-                            .fontWeight(.semibold)
-                            .padding(25)
-                            .background(RoundedRectangle(cornerRadius: 40).fill(.yellow))
-                            .foregroundColor(Color(hex: "101A4D"))
+                            .font(Font.custom("SF Pro", size: 17))
+                            .foregroundColor(Color(red: 0.12, green: 0.14, blue: 0.39))
                     }
+                    .padding(.horizontal, 20)
+                    .padding(.vertical, 14)
+                    .frame(width: 361, alignment: .center)
+                    .background(.white)
+                    .cornerRadius(12)
+                    
+                    // Bottom Space
+                    Spacer()
+                        .frame(minHeight: 16, idealHeight: 40, maxHeight: .infinity)
+                        .fixedSize()
                 }
                 .padding()
             }
+            .frame(width: 393, height: 852)
+            .background(Color(red: 0.12, green: 0.14, blue: 0.39))
         }
         .navigationBarBackButtonHidden(true)
         .environmentObject(alarmManager)
-        //        .navigationBarItems(leading:
-        //                        Image("railrest_white")
-        //                            .resizable()
-        //                            .aspectRatio(contentMode: .fit)
-        //                            .frame(width: 120, height: 40) // Adjust size as needed
-        //                    )
-        
-        
     }
     
     func fetchSleepData() {
