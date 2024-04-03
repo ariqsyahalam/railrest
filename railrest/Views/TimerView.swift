@@ -13,8 +13,14 @@ struct TimerView: View {
     var body: some View {
         VStack {
             Text(timerManager.formattedTime)
-                .font(.largeTitle)
-                .bold()
+                .font(
+                Font.custom("SF Pro", size: 64)
+                .weight(.bold)
+                )
+                .multilineTextAlignment(.center)
+                .foregroundColor(.white)
+
+                .frame(width: 328, alignment: .top)
         }
         .onAppear {
             timerManager.startTimer()

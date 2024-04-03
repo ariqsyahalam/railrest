@@ -11,19 +11,24 @@ class TimerManager: ObservableObject {
     @Published var elapsedTime: TimeInterval = 0
     @Published var isRunning: Bool = false
     @Published var alarmTriggered: Bool = false
+    @Published var averageLightSleepDuration: Double = 3
 
     private var timer: Timer?
     private let alarmManager = AlarmManager()
     
     func startTimer() {
+        elapsedTime = averageLightSleepDuration
+        print(elapsedTime)
+        fetchSleepData()
+        print(elapsedTime)
         timer?.invalidate()
         isRunning = true
         timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { timer in
-            self.elapsedTime += 1
-            if self.elapsedTime >= 300 && !self.alarmTriggered { //ubah ini karena yg jd patokan adalah heartrate <50
+            self.elapsedTime -= 1
+            if self.elapsedTime == 0 && !self.alarmTriggered { //ubah ini karena yg jd patokan adalah heartrate <50
                 self.alarmTriggered = true
                 self.alarmManager.playAlarmSound()
-                
+                self.stopTimer()
                 print("Timer started")
 
             }
@@ -51,4 +56,32 @@ class TimerManager: ObservableObject {
         let seconds = Int(elapsedTime) % 60
         return String(format: "%02d:%02d", minutes, seconds)
     }
+    
+    func fetchSleepData() {
+        HealthKitManager.shared.requestSleepAuthorization { authorized in
+            guard authorized else {
+//                self.alertMessage = "HealthKit authorization was denied."
+//                self.showingAlert = true
+                return
+            }
+            
+            HealthKitManager.shared.fetchSleepData { sleepData in
+                if let sleepData = sleepData {
+                    if let firstPhaseDuration = HealthKitManager.shared.calculateFirstPhaseLightSleepDuration(from: sleepData) {
+                        self.averageLightSleepDuration = firstPhaseDuration
+                        print()
+                        print(firstPhaseDuration)
+                    } else {
+//                        self.alertMessage = "No Light Sleep data found for the first phase."
+//                        self.showingAlert = true
+                    }
+                } else {
+//                    self.alertMessage = "Failed to fetch sleep data."
+//                    self.showingAlert = true
+                }
+            }
+        }
+    }
+
+    
 }
