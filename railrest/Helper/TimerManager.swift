@@ -11,7 +11,9 @@ class TimerManager: ObservableObject {
     @Published var elapsedTime: TimeInterval = 0
     @Published var isRunning: Bool = false
     @Published var alarmTriggered: Bool = false
-    @Published var averageLightSleepDuration: Double = 3
+    @Published var averageLightSleepDuration: Double = 10
+    @Published var showingAlert: Bool = false
+    @Published var alertDismissed: Bool = false
 
     private var timer: Timer?
     private let alarmManager = AlarmManager()
@@ -39,9 +41,14 @@ class TimerManager: ObservableObject {
     func stopTimer() {
         timer?.invalidate()
         isRunning = false
-        self.alarmManager.stopAlarmSound() //tambah ini
+        self.showingAlert = true
         
         print("Timer stopped")
+    }
+    
+    func setAlertDismissed(to value: Bool) {
+        alertDismissed = value
+        self.alarmManager.stopAlarmSound() //tambah ini
     }
     
     func resetTimer() {

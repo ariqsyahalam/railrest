@@ -75,6 +75,14 @@ struct OngoingView: View {
             .background(Color(hex: "1E2363"))
         }
     }
+    .alert(isPresented: $timerManager.showingAlert) {
+        Alert(title: Text("Time To Wake Up!"),
+              message: Text("Your Power Nap Session has been completed"),
+              dismissButton: .default(Text("I’m Awake")){
+                timerManager.setAlertDismissed(to: true)
+            }
+        )
+    }
     
 }
 }
