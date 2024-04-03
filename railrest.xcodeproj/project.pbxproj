@@ -20,6 +20,7 @@
 		448EB4F72BBA8DE7002B5D63 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 448EB4F62BBA8DE7002B5D63 /* Assets.xcassets */; };
 		448EB4FA2BBA8DE7002B5D63 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 448EB4F92BBA8DE7002B5D63 /* Preview Assets.xcassets */; };
 		448EB5212BBAA495002B5D63 /* HealthKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448EB5202BBAA495002B5D63 /* HealthKitManager.swift */; };
+		92FBFA4D2BBD399500F5E545 /* SummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FBFA4C2BBD399500F5E545 /* SummaryView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -52,6 +53,7 @@
 		448EB5002BBA8E1E002B5D63 /* railrest.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = railrest.entitlements; sourceTree = "<group>"; };
 		448EB5052BBA8F0B002B5D63 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		448EB5202BBAA495002B5D63 /* HealthKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitManager.swift; sourceTree = "<group>"; };
+		92FBFA4C2BBD399500F5E545 /* SummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 				4488D86B2BBBCE3400C4E55C /* ContentView.swift */,
 				4488D8682BBBCE3400C4E55C /* InitialView.swift */,
 				4488D86A2BBBCE3400C4E55C /* OngoingView.swift */,
+				92FBFA4C2BBD399500F5E545 /* SummaryView.swift */,
 				4488D8692BBBCE3400C4E55C /* TimerView.swift */,
 			);
 			path = Views;
@@ -203,6 +206,7 @@
 				4488D8782BBBD02900C4E55C /* Color.swift in Sources */,
 				4488D8752BBBD02900C4E55C /* OptionButton.swift in Sources */,
 				4488D86C2BBBCE3400C4E55C /* ContentView.swift in Sources */,
+				92FBFA4D2BBD399500F5E545 /* SummaryView.swift in Sources */,
 				4488D86D2BBBCE3400C4E55C /* AlarmView.swift in Sources */,
 				448EB4F32BBA8DE6002B5D63 /* railrestApp.swift in Sources */,
 				4488D8762BBBD02900C4E55C /* TimerManager.swift in Sources */,
@@ -343,7 +347,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"railrest/Preview Content\"";
-				DEVELOPMENT_TEAM = C89FEC543S;
+				DEVELOPMENT_TEAM = 3A9586WG73;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = railrest/Info.plist;
@@ -377,7 +381,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"railrest/Preview Content\"";
-				DEVELOPMENT_TEAM = C89FEC543S;
+				DEVELOPMENT_TEAM = 3A9586WG73;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = railrest/Info.plist;
