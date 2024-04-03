@@ -93,5 +93,6 @@ class HealthKitManager {
         return nil
     }
 
+    
 }
 
