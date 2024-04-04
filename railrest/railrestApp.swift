@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct railrestApp: App {
+    let alarmManager = AlarmManager() // Initialize your AlarmManager
+    
     var body: some Scene {
         WindowGroup {
-            FinalView()
+            InitialView().environmentObject(alarmManager) // Provide the AlarmManager environment object to your ContentView
         }
     }
 }
