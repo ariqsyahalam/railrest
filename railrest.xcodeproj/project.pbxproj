@@ -20,6 +20,7 @@
 		4488D8762BBBD02900C4E55C /* TimerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4488D8722BBBD02900C4E55C /* TimerManager.swift */; };
 		4488D8772BBBD02900C4E55C /* AlarmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4488D8732BBBD02900C4E55C /* AlarmManager.swift */; };
 		4488D8782BBBD02900C4E55C /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4488D8742BBBD02900C4E55C /* Color.swift */; };
+		4488D87A2BBE3C6D00C4E55C /* FinalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4488D8792BBE3C6D00C4E55C /* FinalView.swift */; };
 		448EB4F32BBA8DE6002B5D63 /* railrestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448EB4F22BBA8DE6002B5D63 /* railrestApp.swift */; };
 		448EB4F72BBA8DE7002B5D63 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 448EB4F62BBA8DE7002B5D63 /* Assets.xcassets */; };
 		448EB4FA2BBA8DE7002B5D63 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 448EB4F92BBA8DE7002B5D63 /* Preview Assets.xcassets */; };
@@ -53,6 +54,7 @@
 		4488D8722BBBD02900C4E55C /* TimerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerManager.swift; sourceTree = "<group>"; };
 		4488D8732BBBD02900C4E55C /* AlarmManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmManager.swift; sourceTree = "<group>"; };
 		4488D8742BBBD02900C4E55C /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		4488D8792BBE3C6D00C4E55C /* FinalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalView.swift; sourceTree = "<group>"; };
 		448EB4EF2BBA8DE6002B5D63 /* railrest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = railrest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		448EB4F22BBA8DE6002B5D63 /* railrestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = railrestApp.swift; sourceTree = "<group>"; };
 		448EB4F62BBA8DE7002B5D63 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -60,7 +62,6 @@
 		448EB5002BBA8E1E002B5D63 /* railrest.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = railrest.entitlements; sourceTree = "<group>"; };
 		448EB5052BBA8F0B002B5D63 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		448EB5202BBAA495002B5D63 /* HealthKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitManager.swift; sourceTree = "<group>"; };
-		92FBFA4C2BBD399500F5E545 /* SummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,8 +105,8 @@
 				4488D86B2BBBCE3400C4E55C /* ContentView.swift */,
 				4488D8682BBBCE3400C4E55C /* InitialView.swift */,
 				4488D86A2BBBCE3400C4E55C /* OngoingView.swift */,
-				92FBFA4C2BBD399500F5E545 /* SummaryView.swift */,
 				4488D8692BBBCE3400C4E55C /* TimerView.swift */,
+				4488D8792BBE3C6D00C4E55C /* FinalView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -228,6 +229,7 @@
 				4488D8782BBBD02900C4E55C /* Color.swift in Sources */,
 				4488D8752BBBD02900C4E55C /* OptionButton.swift in Sources */,
 				4488D86C2BBBCE3400C4E55C /* ContentView.swift in Sources */,
+				4488D87A2BBE3C6D00C4E55C /* FinalView.swift in Sources */,
 				019E18F82BBD399C0086012D /* NoiseManager.swift in Sources */,
 				4488D86D2BBBCE3400C4E55C /* AlarmView.swift in Sources */,
 				448EB4F32BBA8DE6002B5D63 /* railrestApp.swift in Sources */,
@@ -380,7 +382,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -414,7 +416,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -1,13 +1,13 @@
 //
-//  SummaryView.swift
+//  FinalView.swift
 //  railrest
 //
-//  Created by Evelyn Santoso on 03/04/24.
+//  Created by Reyhan Ariq Syahalam on 04/04/24.
 //
 
 import SwiftUI
 
-struct SummaryView: View {
+struct FinalView: View {
     var body: some View {
         NavigationStack{
             ZStack {
@@ -52,14 +52,14 @@ struct SummaryView: View {
                 .padding()
             }
             .frame(width: 393, height: 852)
-//            .background(
-//                LinearGradient(gradient: Gradient(colors: [Color(hex : "036B46"), Color(hex : "2DAA7D")]), startPoint: .top, endPoint: .bottom)
-//                )
+            .background(
+                LinearGradient(gradient: Gradient(colors: [Color(hex : "036B46"), Color(hex : "2DAA7D")]), startPoint: .top, endPoint: .bottom)
+                )
             }
         }
-    }
+}
 
 
 #Preview {
-    SummaryView()
+    FinalView()
 }
