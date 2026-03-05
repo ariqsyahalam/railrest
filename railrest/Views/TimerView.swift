@@ -21,6 +21,7 @@ struct TimerView: View {
                 .foregroundColor(.white)
 
                 .frame(width: 328, alignment: .top)
+                .padding()
         }
         .onAppear {
             timerManager.startTimer()

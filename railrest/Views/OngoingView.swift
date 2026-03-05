@@ -13,9 +13,7 @@ struct OngoingView: View {
     @State private var alarmStarted = false
     @State private var activeSoundType: String? = nil
     @State private var currentPlayingSound: String?
-    
     @StateObject var timerManager: TimerManager
-    
     @State private var isShowingFinalView = false // New state for navigation
     
     init() {
